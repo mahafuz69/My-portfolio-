@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- site metas -->
+    <title>About</title>
+    <meta name="keywords" content="web developer, full stack, python, HTML, CSS, JavaScript">
+    <meta name="description" content="Abdul-Mumin Mahfuz - Full Stack Web Developer Portfolio">
+    <meta name="author" content="Abdul-Mumin Mahfuz">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #d01e58;
+            --secondary-color: #ffa500;
+            --dark-color: #333333;
+            --light-color: #ffffff;
+            --background-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        /* Header Styles */
+        .header_section {
+            background: var(--light-color);
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary-color) !important;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+        
+        /* Hero Section */
+        .hero_section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background-color: var(--primary-color);
+            padding-top: 80px;
+            color: var(--light-color);
+        }
+        
+        .hero_content {
+            padding: 50px 0;
+        }
+        
+        .hero_name {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+        
+        .hero_title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .hero_subtitle {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+        
+        .contact_info {
+            margin-top: 30px;
+        }
+        
+        .contact_info p {
+            margin-bottom: 5px;
+        }
+        
+        .hero_image {
+            position: relative;
+            text-align: center;
+        }
+        
+        .hero_image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+        
+        /* About Section */
+        .about_section {
+            padding: 100px 0;
+            background-color: var(--light-color);
+        }
+        
+        .section_title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .about_content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Skills Section */
+        .skills_section {
+            padding: 100px 0;
+            background-color: var(--background-color);
+        }
+        
+        .skills_container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .skill_category {
+            flex: 0 0 48%;
+            margin-bottom: 30px;
+        }
+        
+        .skill_title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .skill_bar {
+            height: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .skill_progress {
+            height: 100%;
+            border-radius: 5px;
+            background-color: var(--primary-color);
+        }
+        
+        .software_icons {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .software_icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            font-weight: 600;
+            border: 5px solid #e9ecef;
+            position: relative;
+        }
+        
+        .icon_html {
+            border-color: var(--primary-color);
+        }
+        
+        .icon_css {
+            border-color: var(--primary-color);
+        }
+        
+        .icon_js {
+            border-color: var(--secondary-color);
+        }
+        
+        .icon_python {
+            border-color: var(--secondary-color);
+        }
+        
+        /* Work Experience */
+        .experience_section {
+            padding: 100px 0;
+            background-color: var(--light-color);
+        }
+        
+        .experience_item {
+            margin-bottom: 50px;
+            display: flex;
+        }
+        
+        .experience_date {
+            flex: 0 0 150px;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .experience_content {
+            flex: 1;
+        }
+        
+        .experience_title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .experience_company {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        /* Contact Section */
+        .contact_section {
+            padding: 100px 0;
+            background-color: var(--background-color);
+        }
+        
+        .form-control {
+            border-radius: 0;
+            border: none;
+            border-bottom: 2px solid #ced4da;
+            padding: 15px 10px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            box-shadow: none;
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 10px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        /* Footer */
+        .footer_section {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            padding: 50px 0 30px;
+            text-align: center;
+        }
+        
+        .social_icons {
+            margin-bottom: 20px;
+        }
+        
+        .social_icons a {
+            color: var(--light-color);
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .social_icons a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .copyright_section {
+            padding: 20px 0;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero_name {
+                font-size: 2.8rem;
+            }
+            
+            .hero_title {
+                font-size: 2rem;
+            }
+            
+            .hero_subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .skill_category {
+                flex: 0 0 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero_section {
+                height: auto;
+                padding: 120px 0 50px;
+            }
+            
+            .hero_image {
+                margin-top: 50px;
+            }
+            
+            .experience_item {
+                flex-direction: column;
+            }
+            
+            .experience_date {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header_section">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html">MAHFUZ</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experience">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero_section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero_content">
+                    <h1 class="hero_name">ABDUL-MUMIN<br>MAHFUZ</h1>
+                    <h2 class="hero_title">WEB DEVELOPER</h2>
+                    <h3 class="hero_subtitle">Computer Science Student</h3>
+                    <div class="contact_info">
+                        <p><strong>Github:</strong> <a href="#" style="color: white;">mahafuz69</a></p>
+                        <p><strong>Email:</strong> <a href="mohammedmahafuzabdulmumin@gmail.com" style="color: white;">mohammedmahafuzabdulmumin@gmail.com</a></p>
+                        <p><strong>Phone:</strong> +233247291835</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero_image">
+                    <img src="./images/00.jpg"  height="200px" width="400px" alt="Abdul-Mumin Mahfuz" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about_section">
+        <div class="container">
+            <h2 class="section_title">ABOUT ME</h2>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="about_content">
+                        <p>Hello! I'm Abdul-Mumin Mahfuz, a computer science student at Ghana Communication Technology University. I have a certificate in Python development and am currently offering full-stack development courses on Udemy.</p>
+                        <p>I have completed several online courses in full-stack development and web design, equipping me with the skills to build robust and visually appealing websites. My passion lies in creating clean, functional, and user-friendly web experiences that solve real problems.</p>
+                        <p>As a developer, I believe in continuous learning and staying updated with the latest technologies in web development. I'm dedicated to delivering high-quality work that exceeds client expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="section_title">SKILLS</h2>
+                    <div class="skill_category">
+                        <h3 class="skill_title">Frontend Development</h3>
+                        <div class="skill_bar">
+                            <div class="skill_progress" style="width: 90%;"></div>
+                        </div>
+                        
+                        <h3 class="skill_title">Backend Development</h3>
+                        <div class="skill_bar">
+                            <div class="skill_progress" style="width: 85%;"></div>
+                        </div>
+                        
+                        <h3 class="skill_title">Database Management</h3>
+                        <div class="skill_bar">
+                            <div class="skill_progress" style="width: 80%;"></div>
+                        </div>
+                        
+                        <h3 class="skill_title">Web Design</h3>
+                        <div class="skill_bar">
+                            <div class="skill_progress" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <h2 class="section_title">SOFTWARE</h2>
+                    <div class="software_icons">
+                        <div class="software_icon icon_html">
+                            HTML
+                        </div>
+                        <div class="software_icon icon_css">
+                            CSS
+                        </div>
+                        <div class="software_icon icon_js">
+                            JS
+                        </div>
+                        <div class="software_icon icon_python">
+                            PY
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience_section">
+        <div class="container">
+            <h2 class="section_title">WORK EXPERIENCE</h2>
+            
+            <div class="experience_item">
+                <div class="experience_date">
+                  2021-2022
+                </div>
+                <div class="experience_content">
+                    <h3 class="experience_title">Openlabs Instructor</h3>
+                    <h4 class="experience_company">Openlabs Ghana</h4>
+                    <p>Creating and delivering high-quality courses on full-stack web development. Mentoring students and providing support through their learning journey.</p>
+                </div>
+            </div>
+            
+            <div class="experience_item">
+                <div class="experience_date">
+                    2021-2025
+                </div>
+                <div class="experience_content">
+                    <h3 class="experience_title">Freelance Web Developer</h3>
+                    <h4 class="experience_company">Self-employed</h4>
+                    <p>Developed and deployed responsive websites for various clients. Implemented both frontend and backend solutions using modern web technologies.</p>
+                </div>
+            </div>
+            
+            <div class="experience_item">
+                <div class="experience_date">
+                    2024
+                </div>
+                <div class="experience_content">
+                    <h3 class="experience_title">Web Development Intern</h3>
+                    <h4 class="experience_company">Tech Solutions Ltd</h4>
+                    <p>Assisted in the development of web applications. Gained hands-on experience with HTML, CSS, JavaScript, and Python frameworks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact_section">
+        <div class="container">
+            <h2 class="section_title">CONTACT ME</h2>
+            <p class="text-center mb-5">If you'd like to work together or have any questions, feel free to reach out!</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form action="#" method="POST" class="contact_form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <input type="text" name="subject" class="form-control" placeholder="Subject">
+                        <textarea name="message" class="form-control" placeholder="Your Message" rows="5" required></textarea>
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer_section">
+        <div class="container">
+            <div class="social_icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+            
+            <div class="copyright_section">
+                <p>© 2025 All Rights Reserved. Design by Mahfuz</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Javascript files-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Smooth scrolling
+        $(document).ready(function(){
+            $('a.nav-link').on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top - 70
+                    }, 800);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
